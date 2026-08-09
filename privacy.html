@@ -1,50 +1,247 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Política de privacidad — StarDrift</title>
-  <style>
-    body{
-      font-family:Arial, Helvetica, sans-serif;
-      max-width:800px;
-      margin:40px auto;
-      padding:0 20px;
-      line-height:1.7;
-      color:#222;
-    }
-    h1{color:#111827;}
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Política de privacidad — StarDrift</title>
+<meta name="description" content="Política de privacidad de StarDrift, simulador de vida en el espacio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Exo+2:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080b14;
+  --panel:#10152a;
+  --panel-2:#161c38;
+  --line:rgba(255,255,255,0.08);
+  --text:#e7ecfa;
+  --text-dim:#939ec0;
+  --text-dim-2:#a4b0d6;
+  --text-faint:#5b6485;
+  --cyan:#5eead4;
+  --violet:#b389f9;
+  --gold:#ffc069;
+  --font-display:'Orbitron', sans-serif;
+  --font-body:'Exo 2', sans-serif;
+  --glow-cyan:0 0 30px -6px rgba(94,234,212,0.45);
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--font-body);
+  -webkit-font-smoothing:antialiased;
+  position:relative;
+  overflow-x:hidden;
+}
+a{color:var(--cyan); text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+#stars{
+  position:fixed; inset:0; z-index:0; pointer-events:none;
+  background:
+    radial-gradient(circle at 15% 8%, rgba(94,234,212,0.06), transparent 40%),
+    radial-gradient(circle at 85% 92%, rgba(179,137,249,0.07), transparent 45%);
+}
+.star{
+  position:absolute; border-radius:50%; background:#fff;
+  animation:twinkle var(--dur,3s) ease-in-out infinite;
+  animation-delay:var(--delay,0s);
+}
+@keyframes twinkle{
+  0%,100%{opacity:var(--min,0.15); transform:scale(1);}
+  50%{opacity:var(--max,0.9); transform:scale(1.4);}
+}
+
+header.site{
+  position:relative; z-index:1;
+  border-bottom:1px solid var(--line);
+  padding:20px 0;
+}
+.nav-inner{
+  max-width:800px; margin:0 auto; padding:0 24px;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.logo{
+  display:flex; align-items:center; gap:9px;
+  font-family:var(--font-display);
+  font-weight:800; font-size:17px; letter-spacing:0.04em;
+}
+.logo .dot{
+  width:8px; height:8px; border-radius:50%;
+  background:var(--cyan); box-shadow:0 0 12px 2px rgba(94,234,212,0.8);
+}
+.back-link{
+  font-family:var(--font-body); font-weight:600; font-size:13.5px;
+  color:var(--text-dim); display:flex; align-items:center; gap:6px;
+}
+.back-link:hover{color:var(--text); text-decoration:none;}
+
+main{
+  position:relative; z-index:1;
+  max-width:760px; margin:0 auto;
+  padding:56px 24px 90px;
+}
+.eyebrow{
+  font-family:var(--font-display); font-weight:700; letter-spacing:0.14em;
+  text-transform:uppercase; font-size:12px; color:var(--gold);
+  display:flex; align-items:center; gap:8px; margin-bottom:16px;
+}
+h1{
+  font-family:var(--font-display); font-weight:800; letter-spacing:-0.01em;
+  font-size:clamp(28px, 4vw, 38px);
+  margin-bottom:10px;
+  line-height:1.15;
+}
+.updated{
+  font-size:13.5px; color:var(--text-faint); margin-bottom:40px;
+  padding-bottom:24px; border-bottom:1px solid var(--line);
+}
+.intro-card{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:22px 24px;
+  margin-bottom:44px;
+  font-size:15px; line-height:1.7; color:var(--text-dim-2);
+}
+.intro-card b{color:var(--text);}
+
+section.policy-block{
+  margin-bottom:38px;
+  padding-bottom:38px;
+  border-bottom:1px solid var(--line);
+}
+section.policy-block:last-of-type{border-bottom:none;}
+.block-head{
+  display:flex; align-items:center; gap:12px;
+  margin-bottom:14px;
+}
+.block-icon{
+  width:34px; height:34px; border-radius:10px;
+  background:var(--panel-2); border:1px solid var(--line);
+  display:flex; align-items:center; justify-content:center;
+  font-size:16px; flex-shrink:0;
+}
+h2{
+  font-family:var(--font-display); font-weight:700; font-size:18px;
+  letter-spacing:0.01em; color:var(--text);
+}
+.policy-block p{
+  font-size:15px; line-height:1.75; color:var(--text-dim-2);
+  margin-left:46px;
+  max-width:620px;
+}
+.policy-block p + p{margin-top:12px;}
+
+.contact-card{
+  background:linear-gradient(150deg, var(--panel), var(--panel-2));
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:28px 26px;
+  margin-top:8px;
+  box-shadow:var(--glow-cyan);
+}
+.contact-card p{margin-left:0; margin-bottom:14px; color:var(--text-dim-2); font-size:15px; line-height:1.7;}
+.contact-email{
+  display:inline-flex; align-items:center; gap:10px;
+  font-family:var(--font-display); font-size:14px; font-weight:700;
+  background:var(--bg); border:1px solid var(--line); border-radius:999px;
+  padding:11px 20px;
+}
+.contact-email:hover{text-decoration:none; border-color:var(--cyan);}
+
+footer{
+  position:relative; z-index:1;
+  border-top:1px solid var(--line);
+  padding:28px 0;
+}
+.footer-inner{
+  max-width:760px; margin:0 auto; padding:0 24px;
+  display:flex; justify-content:space-between; align-items:center;
+  flex-wrap:wrap; gap:14px;
+}
+.footer-copy{font-size:12.5px; color:var(--text-faint);}
+.studio-tag{font-size:12.5px; color:var(--text-faint);}
+.studio-tag b{color:var(--text-dim-2);}
+</style>
 </head>
 <body>
-  <h1>Política de privacidad de StarDrift</h1>
 
-  <p>Última actualización: 8 de agosto de 2026</p>
+<div id="stars"></div>
 
-  <p>
-    StarDrift es un videojuego para Android desarrollado por StarDrift Studios.
-  </p>
+<header class="site">
+  <div class="nav-inner">
+    <div class="logo"><span class="dot"></span>STAR<span style="color:var(--cyan);">DRIFT</span></div>
+    <a href="index.html" class="back-link">← Volver al inicio</a>
+  </div>
+</header>
 
-  <h2>Datos recopilados</h2>
-  <p>
-    StarDrift no recopila datos personales identificables del usuario.
-    El progreso del juego se almacena localmente en el dispositivo.
-  </p>
+<main>
+  <div class="eyebrow">✦ Legal</div>
+  <h1>Política de privacidad</h1>
+  <div class="updated">Última actualización: 8 de agosto de 2026</div>
 
-  <h2>Publicidad</h2>
-  <p>
-    La aplicación puede mostrar anuncios recompensados opcionales.
-    Ver un anuncio nunca es obligatorio para continuar jugando.
-  </p>
+  <div class="intro-card">
+    <b>StarDrift</b> es un videojuego para Android desarrollado por <b>StarDrift Studios</b>. Esta política explica, de forma breve y clara, qué información se recopila cuando juegas y cómo se trata.
+  </div>
 
-  <h2>Contacto</h2>
-  <p>
-    Para cualquier consulta relacionada con privacidad puedes contactar en:
-    <a href="mailto:contacto@zendbot.tech">contacto@zendbot.tech</a>
-  </p>
+  <section class="policy-block">
+    <div class="block-head">
+      <div class="block-icon">🔒</div>
+      <h2>Datos recopilados</h2>
+    </div>
+    <p>StarDrift no recopila datos personales identificables del usuario.</p>
+    <p>El progreso del juego —tu personaje, tus decisiones y tu diario— se almacena localmente en tu dispositivo. No se envía a ningún servidor externo.</p>
+  </section>
 
-  <p>
-    Desarrollado por <strong>StarDrift Studios</strong>.
-  </p>
+  <section class="policy-block">
+    <div class="block-head">
+      <div class="block-icon">📺</div>
+      <h2>Publicidad</h2>
+    </div>
+    <p>La aplicación puede mostrar anuncios recompensados de carácter opcional.</p>
+    <p>Ver un anuncio nunca es obligatorio para continuar jugando ni para acceder a ningún contenido esencial del juego.</p>
+  </section>
+
+  <section class="policy-block">
+    <div class="block-head">
+      <div class="block-icon">✉️</div>
+      <h2>Contacto</h2>
+    </div>
+    <div class="contact-card">
+      <p>Para cualquier consulta relacionada con la privacidad de StarDrift, puedes escribirnos directamente:</p>
+      <a class="contact-email" href="mailto:bystardrift@gmail.com">✦ bystardrift@gmail.com</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="studio-tag">Desarrollado por <b>StarDrift Studios</b></div>
+    <div class="footer-copy">© 2026 StarDrift</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const field = document.getElementById('stars');
+  const n = 50;
+  for(let i=0;i<n;i++){
+    const s = document.createElement('div');
+    s.className = 'star';
+    const size = Math.random()*2 + 0.6;
+    s.style.width = size+'px';
+    s.style.height = size+'px';
+    s.style.top = Math.random()*100+'%';
+    s.style.left = Math.random()*100+'%';
+    s.style.setProperty('--dur', (2 + Math.random()*4)+'s');
+    s.style.setProperty('--delay', (Math.random()*5)+'s');
+    s.style.setProperty('--min', (0.1 + Math.random()*0.2).toFixed(2));
+    s.style.setProperty('--max', (0.6 + Math.random()*0.4).toFixed(2));
+    field.appendChild(s);
+  }
+})();
+</script>
+
 </body>
 </html>
