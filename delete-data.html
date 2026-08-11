@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Política de privacidad — StarDrift</title>
-<meta name="description" content="Política de privacidad de StarDrift, simulador de vida en el espacio.">
+<title>Eliminar mis datos — StarDrift</title>
+<meta name="description" content="Cómo eliminar tus datos y tu identificador de publicidad en StarDrift, sin necesidad de contactar con soporte.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Exo+2:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -108,6 +108,7 @@ h1{
   font-size:15px; line-height:1.7; color:var(--text-dim-2);
 }
 .intro-card b{color:var(--text);}
+.intro-card .link-back{display:inline-block; margin-top:10px; font-weight:600;}
 
 
 section.policy-block{
@@ -136,7 +137,7 @@ h2{
   max-width:620px;
 }
 .policy-block p + p{margin-top:12px;}
-.policy-block ul{
+.policy-block ol, .policy-block ul{
   margin-left:46px;
   margin-top:12px;
   max-width:620px;
@@ -144,24 +145,28 @@ h2{
 }
 .policy-block li{
   font-size:15px; line-height:1.75; color:var(--text-dim-2);
-  margin-bottom:8px;
+  margin-bottom:10px;
 }
 .policy-block li::marker{color:var(--cyan);}
+.policy-block li b{color:var(--text);}
 
 
-.inline-link-card{
+.step-card{
   margin-left:46px;
   max-width:620px;
-  margin-top:14px;
-  display:flex; align-items:center; gap:10px;
   background:var(--panel-2);
   border:1px solid var(--line);
   border-radius:12px;
-  padding:14px 16px;
-  font-size:14px;
-  color:var(--text-dim-2);
+  padding:16px 18px;
+  margin-top:14px;
 }
-.inline-link-card a{font-weight:700;}
+.step-card .tag{
+  display:inline-block;
+  font-family:var(--font-display); font-weight:700; font-size:11px;
+  letter-spacing:0.08em; text-transform:uppercase;
+  color:var(--cyan); margin-bottom:8px;
+}
+.step-card p{margin-left:0; font-size:14px;}
 
 
 .contact-card{
@@ -214,81 +219,73 @@ footer{
 <header class="site">
   <div class="nav-inner">
     <div class="logo"><span class="dot"></span>STAR<span style="color:var(--cyan);">DRIFT</span></div>
-    <a href="index.html" class="back-link">← Volver al inicio</a>
+    <a href="privacy.html" class="back-link">← Volver a la política de privacidad</a>
   </div>
 </header>
 
 
 <main>
   <div class="eyebrow">✦ Legal</div>
-  <h1>Política de privacidad</h1>
+  <h1>Eliminar mis datos</h1>
   <div class="updated">Última actualización: 11 de agosto de 2026</div>
 
 
   <div class="intro-card">
-    <b>StarDrift</b> es un videojuego para Android desarrollado por <b>StarDrift Studios</b>. Esta política explica, de forma breve y clara, qué información se recopila cuando juegas y cómo se trata.
+    <b>StarDrift</b> no utiliza cuentas ni servidores propios: no existe ningún dato tuyo almacenado de forma centralizada que nosotros debamos eliminar manualmente. Por eso puedes gestionar todos tus datos tú mismo, al instante, sin escribirnos ni esperar respuesta.
+    <br><a class="link-back" href="privacy.html">Ver la política de privacidad completa →</a>
   </div>
 
 
   <section class="policy-block">
     <div class="block-head">
-      <div class="block-icon">🔒</div>
-      <h2>Datos recopilados</h2>
+      <div class="block-icon">🗑️</div>
+      <h2>Borrar tu progreso de juego</h2>
     </div>
-    <p>StarDrift no recopila datos personales identificables del usuario.</p>
-    <p>El progreso del juego —tu personaje, tus decisiones y tu diario— se almacena localmente en tu dispositivo. No se envía a ningún servidor externo.</p>
-  </section>
-
-
-  <section class="policy-block">
-    <div class="block-head">
-      <div class="block-icon">📺</div>
-      <h2>Publicidad</h2>
+    <p>Tu personaje, tus decisiones y tu diario se guardan únicamente en tu dispositivo. Para eliminarlos por completo:</p>
+    <div class="step-card">
+      <span class="tag">Paso único</span>
+      <p>Desinstala la aplicación StarDrift desde tu dispositivo Android. Al desinstalarla, todo el progreso local se borra automáticamente y de forma permanente. No queda ninguna copia en ningún servidor.</p>
     </div>
-    <p>StarDrift muestra dos tipos de anuncios: anuncios <b>opcionales recompensados</b>, que puedes elegir ver voluntariamente para obtener alguna recompensa dentro del juego, y anuncios <b>automáticos</b>, que pueden aparecer de forma puntual durante la partida sin que el usuario los solicite.</p>
-    <p>La frecuencia de los anuncios automáticos está limitada para no interrumpir la experiencia de forma excesiva.</p>
-    <p>En ningún caso ver un anuncio, de cualquiera de los dos tipos, es obligatorio para continuar jugando ni para acceder a ningún contenido esencial del juego.</p>
   </section>
 
 
   <section class="policy-block">
     <div class="block-head">
       <div class="block-icon">🛰️</div>
-      <h2>Identificadores de publicidad y terceros</h2>
+      <h2>Eliminar tu identificador de publicidad</h2>
     </div>
-    <p>Para mostrar anuncios, StarDrift utiliza un proveedor externo de publicidad (Google AdMob). Este proveedor puede recopilar automáticamente, a través de su SDK, los siguientes datos técnicos del dispositivo:</p>
-    <ul>
-      <li>El identificador de publicidad de Android (Advertising ID o AAID).</li>
-      <li>El App Set ID.</li>
-      <li>Otros identificadores técnicos relacionados con la publicidad.</li>
-    </ul>
-    <p>Estos datos se usan exclusivamente con fines de publicidad, medición de anuncios y prevención de fraude. No se combinan con ninguna información personal identificable del usuario por parte de StarDrift.</p>
-    <div class="inline-link-card">
-      🗑️ ¿Quieres eliminar tu identificador de publicidad o tu progreso? Puedes hacerlo tú mismo, sin escribirnos, desde nuestra <a href="delete-data.html">página de eliminación de datos</a>.
+    <p>El identificador de publicidad (AAID) que usa el SDK de anuncios de Google AdMob lo controla directamente el sistema Android, no StarDrift. Puedes restablecerlo o eliminarlo tú mismo en cualquier momento:</p>
+    <div class="step-card">
+      <span class="tag">En tu dispositivo</span>
+      <p>Ve a <b>Ajustes → Google → Anuncios</b> (en algunos dispositivos: <b>Ajustes → Privacidad → Anuncios</b>) y pulsa <b>Eliminar ID de publicidad</b> o <b>Restablecer ID de publicidad</b>.</p>
     </div>
+    <p>Esta acción se aplica a todas las apps del dispositivo, no solo a StarDrift, y es inmediata: ningún desarrollador, incluido nosotros, puede acceder a tu identificador anterior una vez lo restableces. Más detalles en la sección <a href="privacy.html">Identificadores de publicidad y terceros</a> de nuestra política.</p>
   </section>
 
 
   <section class="policy-block">
     <div class="block-head">
-      <div class="block-icon">🇪🇺</div>
-      <h2>Usuarios de la UE, EEE, Reino Unido y Suiza</h2>
+      <div class="block-icon">🔕</div>
+      <h2>Retirar el consentimiento de anuncios personalizados</h2>
     </div>
-    <p>Si juegas desde la Unión Europea, el Espacio Económico Europeo, Reino Unido o Suiza, antes de mostrarte anuncios personalizados la aplicación puede presentarte un mensaje de consentimiento para que decidas si aceptas o no el uso de tus datos con fines publicitarios.</p>
-    <p>Puedes cambiar o retirar tu consentimiento en cualquier momento desde el propio mensaje de privacidad de la aplicación, desde los ajustes de anuncios de tu dispositivo, o desde nuestra <a href="delete-data.html">página de eliminación de datos</a>.</p>
+    <p>Si en su momento aceptaste recibir anuncios personalizados (usuarios de la UE, EEE, Reino Unido o Suiza), puedes cambiar de opinión cuando quieras:</p>
+    <div class="step-card">
+      <span class="tag">Dentro de la app</span>
+      <p>Abre StarDrift → Ajustes → <b>Privacidad y anuncios</b> → pulsa <b>Gestionar mi consentimiento</b>. El cambio se aplica de forma inmediata, sin necesidad de contactar con soporte.</p>
+    </div>
   </section>
 
 
   <section class="policy-block">
     <div class="block-head">
       <div class="block-icon">✉️</div>
-      <h2>Contacto</h2>
+      <h2>¿Y si tengo un caso distinto?</h2>
     </div>
     <div class="contact-card">
-      <p>La mayoría de las gestiones (borrar tu progreso, tu identificador de publicidad o tu consentimiento de anuncios) puedes hacerlas tú mismo, al instante, sin escribirnos. Para cualquier otra consulta sobre privacidad:</p>
+      <p>Si en el futuro StarDrift incorpora cuentas de usuario o almacenamiento en la nube, esta página se actualizará con un formulario de eliminación específico. Mientras tanto, para cualquier duda que no cubran los pasos anteriores, puedes escribirnos o volver a la política completa:</p>
       <div class="contact-actions">
         <a class="contact-email" href="mailto:bystardrift@gmail.com">✦ bystardrift@gmail.com</a>
-        <a class="contact-link-secondary" href="delete-data.html">🗑️ Eliminar mis datos</a>
+        <a class="contact-link-secondary" href="privacy.html">🔒 Política de privacidad</a>
       </div>
     </div>
   </section>
