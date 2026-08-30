@@ -254,11 +254,27 @@ footer{
       <div class="block-icon">☁️</div>
       <h2>Eliminar tu cuenta y tu guardado en la nube</h2>
     </div>
-    <p>Si usaste la función opcional de <b>Iniciar sesión con Google</b> para guardar tu progreso en la nube, ten en cuenta que cerrar sesión desde Ajustes solo desconecta tu dispositivo — no borra los datos ya guardados en la nube (tu email, nombre, foto de perfil y tu partida guardada).</p>
+    <p>Si usaste la función opcional de <b>Iniciar sesión con Google</b> para guardar tu progreso en la nube, ten en cuenta que cerrar sesión desde Ajustes solo desconecta tu dispositivo — no borra ningún dato ya guardado en la nube. Para eso, sigue los pasos de esta sección.</p>
+    <p>Al solicitar la eliminación de tu cuenta de <b>StarDrift</b> (StarDrift Studios), se elimina de forma permanente lo siguiente:</p>
+    <ul>
+      <li>Tu <b>cuenta de Firebase Authentication</b> vinculada a tu inicio de sesión con Google (email, nombre visible y foto de perfil que recibimos de Google).</li>
+      <li>Tu <b>identificador único de cuenta (UID)</b>.</li>
+      <li>Tu <b>partida guardada en la nube</b> (personaje, decisiones, diario y estadísticas) almacenada en Cloud Firestore y vinculada a esa cuenta.</li>
+    </ul>
+    <p><b>No conservamos ninguna copia adicional</b> de estos datos tras la eliminación: no hacemos copias de seguridad ni backups de tu guardado en la nube, así que no hay ningún periodo de retención posterior más allá del plazo de tramitación.</p>
+    <p>Esta eliminación no afecta a tu progreso local guardado en el propio dispositivo (que sigue las instrucciones de la sección "Borrar tu progreso de juego" más abajo) ni al identificador de publicidad de AdMob (sección "Eliminar tu identificador de publicidad"), que son independientes de tu cuenta.</p>
     <p>Para eliminar por completo tu cuenta y tu guardado en la nube:</p>
     <div class="step-card">
-      <span class="tag">Solicitud por email</span>
-      <p>Escríbenos a <a href="mailto:bystardrift@gmail.com?subject=Eliminar%20mi%20cuenta%20y%20datos%20en%20la%20nube">bystardrift@gmail.com</a> desde la misma dirección de correo con la que iniciaste sesión, indicando "Eliminar mi cuenta y datos en la nube". Eliminaremos tu cuenta de Firebase y tu partida guardada en un plazo máximo de 30 días, y te confirmaremos por email cuando esté hecho.</p>
+      <span class="tag">Paso 1 — Solicítalo por email</span>
+      <p>Escríbenos a <a href="mailto:bystardrift@gmail.com?subject=Eliminar%20mi%20cuenta%20y%20datos%20en%20la%20nube">bystardrift@gmail.com</a> desde la misma dirección de correo con la que iniciaste sesión en StarDrift, con el asunto "Eliminar mi cuenta y datos en la nube".</p>
+    </div>
+    <div class="step-card">
+      <span class="tag">Paso 2 — Verificación</span>
+      <p>Te responderemos para confirmar que la solicitud viene de esa misma cuenta, como medida de seguridad para evitar que alguien borre datos que no son suyos.</p>
+    </div>
+    <div class="step-card">
+      <span class="tag">Paso 3 — Eliminación</span>
+      <p>Eliminamos tu cuenta de Firebase y tu guardado en la nube en un <b>plazo máximo de 30 días naturales</b> desde la confirmación, y te avisamos por email cuando esté hecho.</p>
     </div>
     <p>Además, si en algún momento quieres revocar el acceso de StarDrift a tu cuenta de Google (independientemente de que nos pidas o no el borrado de los datos ya guardados), puedes hacerlo desde <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">la página de permisos de tu cuenta de Google</a>.</p>
   </section>
