@@ -222,7 +222,7 @@ footer{
 <main>
   <div class="eyebrow">✦ Legal</div>
   <h1>Política de privacidad</h1>
-  <div class="updated">Última actualización: 11 de agosto de 2026</div>
+  <div class="updated">Última actualización: 30 de agosto de 2026</div>
 
 
   <div class="intro-card">
@@ -235,8 +235,24 @@ footer{
       <div class="block-icon">🔒</div>
       <h2>Datos recopilados</h2>
     </div>
-    <p>StarDrift no recopila datos personales identificables del usuario.</p>
-    <p>El progreso del juego —tu personaje, tus decisiones y tu diario— se almacena localmente en tu dispositivo. No se envía a ningún servidor externo.</p>
+    <p>Por defecto, StarDrift no recopila datos personales identificables del usuario. El progreso del juego —tu personaje, tus decisiones y tu diario— se almacena localmente en tu dispositivo y no se envía a ningún servidor externo.</p>
+    <p>Si decides iniciar sesión con tu cuenta de Google (una función opcional, ver más abajo), StarDrift recopila y almacena en la nube los datos descritos en la siguiente sección, únicamente mientras mantengas esa sesión activa.</p>
+  </section>
+
+  <section class="policy-block">
+    <div class="block-head">
+      <div class="block-icon">☁️</div>
+      <h2>Inicio de sesión con Google y guardado en la nube</h2>
+    </div>
+    <p>StarDrift ofrece, de forma <b>totalmente opcional</b>, la posibilidad de iniciar sesión con tu cuenta de Google para guardar tu progreso en la nube y recuperarlo si cambias de dispositivo. Si no inicias sesión, el juego funciona exactamente igual y tu progreso se queda solo en tu dispositivo, como se explica en la sección anterior.</p>
+    <p>Si eliges iniciar sesión, usamos <b>Firebase Authentication</b> y <b>Cloud Firestore</b> (servicios de Google) para gestionar tu cuenta y guardar tu partida. En ese caso, se recopilan y almacenan los siguientes datos:</p>
+    <ul>
+      <li><b>Datos de tu cuenta de Google:</b> tu dirección de correo electrónico, tu nombre visible y tu foto de perfil, tal y como los compartes al autorizar el inicio de sesión.</li>
+      <li><b>Un identificador único de cuenta (UID)</b>, generado por Firebase, que usamos para asociar tu progreso a tu cuenta.</li>
+      <li><b>Tu progreso de juego</b> (personaje, decisiones, diario y estadísticas), guardado en la nube y vinculado a ese UID, para poder sincronizarlo entre dispositivos.</li>
+    </ul>
+    <p>Estos datos se transmiten cifrados y se almacenan en los servidores de Google Firebase. No se comparten con nadie más, no se usan con fines publicitarios y no se combinan con los datos de anuncios descritos en la siguiente sección.</p>
+    <p>Puedes cerrar sesión en cualquier momento desde Ajustes dentro de la app. Si quieres eliminar por completo tu cuenta y tu progreso en la nube, puedes hacerlo desde nuestra <a href="delete-data.html">página de eliminación de datos</a>.</p>
   </section>
 
 
@@ -264,8 +280,21 @@ footer{
     </ul>
     <p>Estos datos se usan exclusivamente con fines de publicidad, medición de anuncios y prevención de fraude. No se combinan con ninguna información personal identificable del usuario por parte de StarDrift.</p>
     <div class="inline-link-card">
-      🗑️ ¿Quieres eliminar tu identificador de publicidad o tu progreso? Puedes hacerlo tú mismo, sin escribirnos, desde nuestra <a href="delete-data.html">página de eliminación de datos</a>.
+      🗑️ ¿Quieres eliminar tu identificador de publicidad, tu progreso local o tu cuenta y guardado en la nube? Puedes hacerlo desde nuestra <a href="delete-data.html">página de eliminación de datos</a>.
     </div>
+  </section>
+
+  <section class="policy-block">
+    <div class="block-head">
+      <div class="block-icon">🔧</div>
+      <h2>Encargados del tratamiento</h2>
+    </div>
+    <p>Para las funciones descritas en esta política, StarDrift se apoya en los siguientes proveedores, que actúan como encargados del tratamiento de datos en nuestro nombre:</p>
+    <ul>
+      <li><b>Google AdMob</b>, para mostrar anuncios.</li>
+      <li><b>Google Firebase</b> (Authentication y Cloud Firestore), para el inicio de sesión opcional con Google y el guardado de progreso en la nube.</li>
+    </ul>
+    <p>Puedes consultar cómo tratan los datos en la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">política de privacidad de Google</a>.</p>
   </section>
 
 
